@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jadwalKuliah"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#87A2FF"
+    tools:context=".jadwalKuliah"
+    tools:ignore="HarcodedText">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        android:layout_marginHorizontal="16dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jadwal Kuliah"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_gravity="top|left"/>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/notif"
+                android:layout_gravity="top|right"
+                android:background="@drawable/rounded_white"
+                android:padding="2dp"/>
+        </FrameLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:background="@drawable/rounded_white"
+            android:padding="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp">
+
+            <TableRow>
+                <TextView
+                    android:layout_column="1"
+                    android:text="Senin: "
+                    android:padding="3dp" />
+                <TextView
+                    android:text="Web Frameworks and Deployment (16.00)"
+                    android:layout_gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_column="1"
+                    android:text="Selasa: "
+                    android:padding="3dp" />
+                <TextView
+                    android:text="SISTER (7.30), MANPRO (13.30), PABA (18.30)"
+                    android:gravity="right"
+                    android:padding="3dip" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_column="1"
+                    android:text="Rabu"
+                    android:padding="3dp" />
+                <TextView
+                    android:text="Data Analytics Essentials (7.30)"
+                    android:gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_column="1"
+                    android:text="Kamis: "
+                    android:padding="3dp" />
+                <TextView
+                    android:text="Digital Leadership (7.30)"
+                    android:gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_column="1"
+                    android:text="Jumat: "
+                    android:padding="3dp" />
+                <TextView
+                    android:text="Cloud Computing (14.30)"
+                    android:gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:layout_gravity="center_horizontal"/>
+
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottombar">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
